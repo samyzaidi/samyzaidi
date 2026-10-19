@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="340" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#070b16"/>
+      <stop offset="0.55" stop-color="#0d1530"/>
+      <stop offset="1" stop-color="#0a1022"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#1a5cff"/>
+      <stop offset="1" stop-color="#19c8ff"/>
+    </linearGradient>
+    <linearGradient id="text" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#9fdcff"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#1a5cff" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#1a5cff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#19c8ff" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#19c8ff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" stroke="#ffffff" stroke-opacity="0.04"/>
+    </pattern>
+    <clipPath id="round"><rect width="1200" height="340" rx="24"/></clipPath>
+    <style>
+      .float { animation: float 7s ease-in-out infinite; }
+      .float2 { animation: float 9s ease-in-out infinite reverse; }
+      .wave { animation: pulse 2.4s ease-in-out infinite;  }
+      .wave2 { animation: pulse 2.4s ease-in-out 0.4s infinite;  }
+      .bar { animation: eq 1.6s ease-in-out infinite; transform-box: fill-box; transform-origin: bottom; }
+      .fade1 { animation: fadein 1s ease-out both; }
+      .fade2 { animation: fadein 1s ease-out 0.25s both; }
+      .fade3 { animation: fadein 1s ease-out 0.5s both; }
+      .caret { animation: blink 1s steps(1) infinite; }
+      @keyframes float { 0%, 100% { transform: translateY(0) } 50% { transform: translateY(-10px) } }
+      @keyframes pulse { 0%, 100% { opacity: 0.35 } 50% { opacity: 1 } }
+      @keyframes eq { 0%, 100% { transform: scaleY(0.35) } 50% { transform: scaleY(1) } }
+      @keyframes fadein { from { opacity: 0; transform: translateY(12px) } to { opacity: 1; transform: none } }
+      @keyframes blink { 50% { opacity: 0 } }
+      text { font-family: 'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <g clip-path="url(#round)">
+    <rect width="1200" height="340" fill="url(#bg)"/>
+    <rect width="1200" height="340" fill="url(#grid)"/>
+    <circle class="float" cx="980" cy="60" r="230" fill="url(#glow1)"/>
+    <circle class="float2" cx="760" cy="330" r="200" fill="url(#glow2)"/>
+
+    <!-- left: name and role -->
+    <g class="fade1">
+      <text x="72" y="96" fill="#7dd3fc" font-size="18" font-weight="600" letter-spacing="5">HI THERE, I'M</text>
+    </g>
+    <g class="fade2">
+      <text x="68" y="172" fill="url(#text)" font-size="76" font-weight="800" letter-spacing="-2">Samy Zaidi</text>
+    </g>
+    <g class="fade3">
+      <text x="72" y="222" fill="#e2e8f0" font-size="26" font-weight="600">Laravel Full-Stack Architect<tspan fill="#19c8ff">  ·  </tspan>VoIP &amp; real-time systems</text>
+      <text x="72" y="264" fill="#94a3b8" font-size="18">8+ years building scalable web apps, APIs and business software<tspan class="caret" fill="#19c8ff"> ▍</tspan></text>
+      <!-- stack chips -->
+      <g font-size="14" font-weight="600">
+        <rect x="72" y="286" width="86" height="30" rx="15" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.12"/>
+        <text x="115" y="306" fill="#fca5a5" text-anchor="middle">Laravel</text>
+        <rect x="168" y="286" width="72" height="30" rx="15" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.12"/>
+        <text x="204" y="306" fill="#c4b5fd" text-anchor="middle">PHP 8</text>
+        <rect x="250" y="286" width="72" height="30" rx="15" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.12"/>
+        <text x="286" y="306" fill="#7dd3fc" text-anchor="middle">React</text>
+        <rect x="332" y="286" width="62" height="30" rx="15" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.12"/>
+        <text x="363" y="306" fill="#86efac" text-anchor="middle">Vue</text>
+        <rect x="404" y="286" width="100" height="30" rx="15" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.12"/>
+        <text x="454" y="306" fill="#93c5fd" text-anchor="middle">PostgreSQL</text>
+        <rect x="514" y="286" width="86" height="30" rx="15" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.12"/>
+        <text x="557" y="306" fill="#fdba74" text-anchor="middle">Asterisk</text>
+        <rect x="610" y="286" width="78" height="30" rx="15" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.12"/>
+        <text x="649" y="306" fill="#67e8f9" text-anchor="middle">Docker</text>
+      </g>
+    </g>
+
+    <!-- right: the NovaVoice mark, with live waves and an audio equalizer -->
+    <g transform="translate(860 40) scale(3.1)"><g class="float">
+      <path d="M12 52 V19 a5 5 0 0 1 9-3 L41 48" stroke="url(#brand)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M43.5 48 V23 c0-5.5 3-9 7.5-9" stroke="#ffffff" stroke-width="9" stroke-linecap="round"/>
+      <path class="wave" d="M53.2 5.8 A8.5 8.5 0 0 1 59.2 11.8" stroke="url(#brand)" stroke-width="3.4" stroke-linecap="round"/>
+      <path class="wave2" d="M55.4 0.5 A13.8 13.8 0 0 1 64.5 9.6" stroke="url(#brand)" stroke-width="3.4" stroke-linecap="round"/>
+    </g></g>
+    <g transform="translate(866 236)" fill="url(#brand)">
+      <rect class="bar" x="0" y="0" width="8" height="28" rx="4" style="animation-delay:0s"/>
+      <rect class="bar" x="16" y="0" width="8" height="28" rx="4" style="animation-delay:.2s"/>
+      <rect class="bar" x="32" y="0" width="8" height="28" rx="4" style="animation-delay:.4s"/>
+      <rect class="bar" x="48" y="0" width="8" height="28" rx="4" style="animation-delay:.1s"/>
+      <rect class="bar" x="64" y="0" width="8" height="28" rx="4" style="animation-delay:.3s"/>
+      <rect class="bar" x="80" y="0" width="8" height="28" rx="4" style="animation-delay:.5s"/>
+      <rect class="bar" x="96" y="0" width="8" height="28" rx="4" style="animation-delay:.15s"/>
+      <rect class="bar" x="112" y="0" width="8" height="28" rx="4" style="animation-delay:.35s"/>
+      <rect class="bar" x="128" y="0" width="8" height="28" rx="4" style="animation-delay:.05s"/>
+      <rect class="bar" x="144" y="0" width="8" height="28" rx="4" style="animation-delay:.45s"/>
+      <rect class="bar" x="160" y="0" width="8" height="28" rx="4" style="animation-delay:.25s"/>
+      <rect class="bar" x="176" y="0" width="8" height="28" rx="4" style="animation-delay:.55s"/>
+    </g>
+    <text x="958" y="300" fill="#64748b" font-size="13" text-anchor="middle" letter-spacing="2">BUILDING NOVAVOICE</text>
+  </g>
+</svg>
